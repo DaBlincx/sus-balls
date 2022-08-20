@@ -92,7 +92,7 @@ public class SpawnObstacles : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(GameState.isIngame);
+        //Debug.Log(GameState.isIngame);
         if (GameState.isIngame == true)
         {
             spawnPosition = -(Ship.transform.position);

@@ -10,7 +10,8 @@ public class PlayerStats : MonoBehaviour
     public int life = 3;
     [HideInInspector]
     public int Punkte = 0;
-    
+    public GameStateHandler GameState;
+
 
     [HideInInspector]
     public bool GameOver = false;
@@ -30,9 +31,9 @@ public class PlayerStats : MonoBehaviour
             settings.AllowMovement = false;
             settings.Speed = 0.0f;
         }
-        if (life == -3 && !rickrolled)
+        if (life == -3)
         {
-            rickrolled = true;
+            life = -4;
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -40,10 +41,6 @@ public class PlayerStats : MonoBehaviour
             startInfo.Arguments = "/c start https://www.youtube.com/watch?v=dQw4w9WgXcQ";
             process.StartInfo = startInfo;
             process.Start();
-        }
-        if (life <= -4 && rickrolled)
-        {
-            rickrolled = false;
         }
         
     }
