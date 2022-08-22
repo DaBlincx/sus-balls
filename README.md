@@ -1,3 +1,7 @@
 # sus-balls
 
 premium game
+
+
+# DISCLAIMER
+THIS GAME HAS NOTHING TO DO WITH BALLS
