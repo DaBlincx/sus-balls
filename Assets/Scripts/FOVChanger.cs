@@ -15,7 +15,7 @@ public class FOVChanger : MonoBehaviour
 
     void Update()
     {
-        CurrentFOV.text = "FOV: " + Mathf.Ceil(Camera.main.fieldOfView).ToString();
+        CurrentFOV.text = "FOV: " + (Camera.main.fieldOfView).ToString();
     }
 
     public void ChangeFOV()
